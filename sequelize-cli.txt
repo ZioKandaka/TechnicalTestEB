@@ -1,0 +1,23 @@
+MODEL
+npx sequelize-cli model:generate --name user --attributes userId:integer,user:string,password:string,email:string,createdAt:date,createdBy:string,updatedAt:date,updatedBy:string,deletedAt:date,deletedBy:string
+
+npx sequelize-cli model:generate --name ticket --attributes ticketId:integer,client:string,company:string,trouble:string,status:string,statusLevel:string,userId:integer,createdAt:date,createdBy:string,updatedAt:date,updatedBy:string,deletedAt:date,deletedBy:string
+
+npx sequelize-cli model:generate --name workOrder --attributes workOrderId:integer,ticketId:integer,status:string,statusLevel:string,isAccepted:boolean,createdAt:date,createdBy:string,updatedAt:date,updatedBy:string,deletedAt:date,deletedBy:string
+
+npx sequelize-cli model:generate --name notification --attributes notificationId:integer,type:string,receiver:string,createdAt:date,createdBy:string,updatedAt:date,updatedBy:string,deletedAt:date,deletedBy:string
+
+
+
+MIGRATION
+npx sequelize-cli migration:generate --name create_users
+npx sequelize-cli migration:generate --name create_tickets
+npx sequelize-cli migration:generate --name create_work_orders
+npx sequelize-cli migration:generate --name create_notifications
+
+SEED
+npx sequelize-cli seed:generate --name user
+npx sequelize-cli seed:generate --name ticket
+npx sequelize-cli seed:generate --name wo
+npx sequelize-cli seed:generate --name notification
+
