@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4000
 const cors = require('cors')
 const TicketController = require('./controllers/Ticket.controller')
 const ErrorHandler = require('./middlewares/ErrorHandler')
@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('This is API for EBconnection Indonesia Developer Test. Good luck on your test!')
 })
 
 app.post('/login', UserController.Login)
@@ -32,7 +32,7 @@ app.get('/tickets/:ticketId/ticketId', TicketController.getTicketById)
 
 
 app.post('/tickets', TicketController.postTicket)
-app.post('/tickets/:ticketId/ticketId', TicketController.doneTicket)
+app.post('/tickets/done/:ticketId/ticketId', TicketController.doneTicket)
 
 app.post('/workOrder', WoController.postWo)
 app.post('/workOrder/accept/:workOrderId/workOrderId', WoController.acceptWo)

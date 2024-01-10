@@ -49,7 +49,7 @@ class UserController {
                 email: email
             })
 
-            delete new_user.password
+            delete new_user.dataValues.password
 
             response(res, 201, true, 'Register success', new_user)
         } catch (err) {
