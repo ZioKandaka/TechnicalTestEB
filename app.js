@@ -12,6 +12,7 @@ const UserController = require('./controllers/User.controller')
 const authentication = require('./middlewares/Authentication')
 const WoController = require('./controllers/WorkOrder.controller')
 const NotificationController = require('./controllers/Notification.controller')
+const GroupQuestionController = require('./controllers/GroupQuestion.controller')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -20,6 +21,8 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.send('This is API for EBconnection Indonesia Developer Test. Good luck on your test!')
 })
+
+app.get('/get-group-question', GroupQuestionController.getColoQuestion)
 
 app.post('/login', UserController.Login)
 app.post('/register', UserController.Register)

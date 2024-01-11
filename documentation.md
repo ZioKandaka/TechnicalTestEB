@@ -32,7 +32,7 @@ Request:
 
 ```json
 {
-  "user": "User Name Here",
+  "username": "User Name Here",
   "password": "userpass12345",
   "email": "user@gmail.com"
 }
@@ -47,7 +47,7 @@ _Response (201 - Created)_
   "message": "Register success",
   "data": {
     "userId": 3,
-    "user": "User Name Here",
+    "username": "User Name Here",
     "email": "user@gmail.com",
     "updatedAt": "2024-01-10T03:02:21.331Z",
     "createdAt": "2024-01-10T03:02:21.331Z"
@@ -101,7 +101,7 @@ Request:
 
 ```json
 {
-  "user": "User Name Here",
+  "username": "User Name Here",
   "password": "userpass12345"
 }
 ```
@@ -116,7 +116,7 @@ _Response (200 - OK)_
   "data": {
     "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXIiOiJLYW1pc2F0byBBeWFrYSIsImlhdCI6MTcwNDg1NjE1NH0.Pz84rEwbvlLCWeY3uqA_teYGRpzL0qnLtk9oA_Pr-uw",
     "userId": 3,
-    "user": "User Name Here",
+    "username": "User Name Here",
     "email": "user@gmail.com"
   }
 }
